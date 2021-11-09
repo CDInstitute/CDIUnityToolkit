@@ -49,7 +49,7 @@ namespace CDI.Toolkit.InputHandling
                 movement.y -= speed.y;
             }
 
-            transform.Translate(movement * Time.deltaTime);
+            target.Translate(movement * Time.deltaTime);
         }
     }
 }

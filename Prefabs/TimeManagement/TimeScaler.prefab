@@ -45,4 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   key: 122
   normalTimeScale: 1
-  timeScale: 10
+  timeScale: 60
