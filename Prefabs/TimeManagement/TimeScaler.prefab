@@ -44,5 +44,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   key: 122
+  combinationKeys: 52010000
   normalTimeScale: 1
   timeScale: 60
