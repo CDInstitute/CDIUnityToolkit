@@ -77,6 +77,6 @@ namespace CDI.Toolkit.CollectionManagement
         }
 
         protected abstract void Select(T element);
-        protected abstract void Deselect(T element);
+        protected virtual void Deselect(T element) { }
     }
 }
