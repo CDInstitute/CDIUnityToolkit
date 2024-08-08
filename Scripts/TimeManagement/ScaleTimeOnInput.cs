@@ -1,26 +1,34 @@
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 namespace CDI.Toolkit.TimeManagement
 {
     public class ScaleTimeOnInput : MonoBehaviour
     {
-        [SerializeField] private KeyCode key = KeyCode.Z;
-        [SerializeField] private List<KeyCode> combinationKeys = new List<KeyCode>();
+        [SerializeField] private InputActionReference scaleAction = null;
         [SerializeField] private float normalTimeScale = 1.0f;
         [SerializeField] private float timeScale = 10.0f;
 
-        void Update()
+        private void OnEnable()
         {
-            var isScaled = Input.GetKey(key);
-
-            var isCombo = true;
-            foreach(var key in combinationKeys)
+            if(scaleAction != null)
             {
-                isCombo &= Input.GetKey(key);
+                scaleAction.action.Enable();
             }
+        }
+        
+        private void OnDisable()
+        {
+            if(scaleAction != null)
+            {
+                scaleAction.action.Disable();
+            }
+        }
 
-            Time.timeScale = isScaled || isCombo
+        private void Update()
+        {
+            var isScaled = scaleAction != null && scaleAction.action.IsPressed();
+            Time.timeScale = isScaled
                 ? timeScale
                 : normalTimeScale;
         }

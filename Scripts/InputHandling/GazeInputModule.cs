@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 using System.Collections.Generic;
+using UnityEngine.InputSystem;
 
 // To use:
 // 1. Drag onto your EventSystem game object.
@@ -13,12 +14,11 @@ public class GazeInputModule : PointerInputModule
     public enum Mode { Click = 0, Gaze };
     public Mode mode;
 
-    [Header("Click Settings")]
-    public string ClickInputName = "Submit";
+    [Header("Submit Settings")]
+    public InputActionReference submitAction = null;
+    
     [Header("Gaze Settings")]
-    public float GazeTimeInSeconds = 2f;
-
-    public RaycastResult CurrentRaycast;
+    public float gazeTimeInSeconds = 2f;
 
     private PointerEventData pointerEventData;
     private GameObject currentLookAtHandler;
@@ -29,38 +29,56 @@ public class GazeInputModule : PointerInputModule
         HandleLook();
         HandleSelection();
     }
-
-    void HandleLook()
+    
+    protected override void OnEnable()
     {
-        if (pointerEventData == null)
+        base.OnEnable();
+        
+        if(submitAction != null)
         {
-            pointerEventData = new PointerEventData(eventSystem);
+            submitAction.action.Enable();
         }
+    }
+    
+    protected override void OnDisable()
+    {
+        base.OnDisable();
+        
+        if(submitAction != null)
+        {
+            submitAction.action.Disable();
+        }
+    }
+
+    private void HandleLook()
+    {
+        pointerEventData ??= new PointerEventData(eventSystem);
+        
         // fake a pointer always being at the center of the screen
-        pointerEventData.position = new Vector2(Screen.width / 2, Screen.height / 2);
+        pointerEventData.position = new Vector2(Screen.width / 2.0f, Screen.height / 2.0f);
         pointerEventData.delta = Vector2.zero;
-        List<RaycastResult> raycastResults = new List<RaycastResult>();
+        var raycastResults = new List<RaycastResult>();
         eventSystem.RaycastAll(pointerEventData, raycastResults);
-        CurrentRaycast = pointerEventData.pointerCurrentRaycast = FindFirstRaycast(raycastResults);
+        pointerEventData.pointerCurrentRaycast = FindFirstRaycast(raycastResults);
         ProcessMove(pointerEventData);
     }
 
-    void HandleSelection()
+    private void HandleSelection()
     {
         if (pointerEventData.pointerEnter != null)
         {
             // if the ui receiver has changed, reset the gaze delay timer
-            GameObject handler = ExecuteEvents.GetEventHandler<IPointerClickHandler>(pointerEventData.pointerEnter);
+            var handler = ExecuteEvents.GetEventHandler<IPointerClickHandler>(pointerEventData.pointerEnter);
             if (currentLookAtHandler != handler)
             {
                 currentLookAtHandler = handler;
-                currentLookAtHandlerClickTime = Time.realtimeSinceStartup + GazeTimeInSeconds;
+                currentLookAtHandlerClickTime = Time.realtimeSinceStartup + gazeTimeInSeconds;
             }
 
             // if we have a handler and it's time to click, do it now
             if (currentLookAtHandler != null &&
                 (mode == Mode.Gaze && Time.realtimeSinceStartup > currentLookAtHandlerClickTime) ||
-                (mode == Mode.Click && Input.GetButtonDown(ClickInputName)))
+                (mode == Mode.Click && submitAction != null && submitAction.action.triggered))
             {
                 ExecuteEvents.ExecuteHierarchy(currentLookAtHandler, pointerEventData, ExecuteEvents.pointerClickHandler);
                 currentLookAtHandlerClickTime = float.MaxValue;
@@ -71,6 +89,4 @@ public class GazeInputModule : PointerInputModule
             currentLookAtHandler = null;
         }
     }
-
-
 }

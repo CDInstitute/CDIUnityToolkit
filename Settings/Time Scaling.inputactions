@@ -1,0 +1,45 @@
+{
+    "name": "Time Scaling",
+    "maps": [
+        {
+            "name": "Time Scaling",
+            "id": "9a437b41-c520-4816-a5ce-84204ab77bde",
+            "actions": [
+                {
+                    "name": "Scale Time Up",
+                    "type": "Button",
+                    "id": "69b533ae-31b0-499c-b8d6-63ac169635e4",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "8de8436b-ed8d-422e-b2e4-f14b589e6bc2",
+                    "path": "<Keyboard>/z",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Scale Time Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ac94dfd6-2284-4e41-8b12-d9531ae46502",
+                    "path": "<Gamepad>/leftStickPress",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Scale Time Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
