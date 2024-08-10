@@ -36,8 +36,8 @@
             "bindings": [
                 {
                     "name": "",
-                    "id": "6220ff8e-6cb9-4623-9ddc-2b3292200ac3",
-                    "path": "<XRController>{RightHand}/{PrimaryAction}",
+                    "id": "ce46b983-c121-466e-8b58-58de12288978",
+                    "path": "<XRHMD>/{PrimaryAction}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -47,8 +47,8 @@
                 },
                 {
                     "name": "",
-                    "id": "945e6827-c376-4d6e-8ce5-0b9d4c79ec2b",
-                    "path": "<XRController>{RightHand}/{SecondaryAction}",
+                    "id": "32dc7985-0fde-4785-a400-07db8c19ad9b",
+                    "path": "<XRController>/{PrimaryAction}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -58,8 +58,8 @@
                 },
                 {
                     "name": "",
-                    "id": "37950b79-e070-4ab2-a29d-4f9da4100e63",
-                    "path": "<XRController>{LeftHand}/{PrimaryAction}",
+                    "id": "1359d0ec-08a5-45aa-8112-3aec864b0738",
+                    "path": "<OculusTouchController>/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -69,8 +69,30 @@
                 },
                 {
                     "name": "",
-                    "id": "b8306971-4cf3-4734-803d-58dff9a1d6b6",
-                    "path": "<XRController>{LeftHand}/{SecondaryAction}",
+                    "id": "0bc4d955-c874-49bc-b34e-1727155f1ca1",
+                    "path": "<XRHMD>/{SecondaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle Record",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "4c5c42a1-1469-4d37-802d-dd8464b4fb17",
+                    "path": "<XRController>/{SecondaryAction}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle Record",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "63a44c18-48f3-45df-bcf3-ef3da53ec341",
+                    "path": "<OculusTouchController>/secondaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -102,8 +124,19 @@
                 },
                 {
                     "name": "",
-                    "id": "27cf23b0-3d55-433f-af3e-a6e9ecf03c62",
-                    "path": "<XRController>{LeftHand}/{Menu}",
+                    "id": "343d7a9b-6076-4168-b861-a985126a60b2",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle Status",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ba15737f-3bde-4ae0-8b49-319b0bb7adf1",
+                    "path": "<OculusTouchController>/start",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

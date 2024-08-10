@@ -37,6 +37,17 @@
                     "action": "Scale Time Up",
                     "isComposite": false,
                     "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "854b6489-3bde-4f39-af9c-31b8bc91d081",
+                    "path": "<OculusTouchController>{LeftHand}/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Scale Time Up",
+                    "isComposite": false,
+                    "isPartOfComposite": false
                 }
             ]
         }
