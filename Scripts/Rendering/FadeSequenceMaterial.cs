@@ -99,9 +99,14 @@ namespace CDI.CDIToolkit.Rendering
             
             Color = to;
         }
-        
+
         private void Awake()
-            => FadeSequence();
+        {
+            if (startOnAwake)
+            {
+                FadeSequence();
+            }
+        }
 
         private void OnDestroy()
         {
