@@ -3,16 +3,30 @@ using UnityEngine.InputSystem;
 
 namespace CDI.Toolkit.InputHandling
 {
+    /// <summary>
+    /// Translate a target transform based on input on the x, y, and z axis.
+    /// </summary>
     public class TranslateOnInput : MonoBehaviour
     {
-        [SerializeField] private Transform target = null;
-        [SerializeField] private Vector3 speed = Vector3.one;
-
-        [SerializeField] private InputActionReference xAction = null;
-        [SerializeField] private InputActionReference yAction = null;
-        [SerializeField] private InputActionReference zAction = null;
+        [SerializeField, Tooltip("The target transform to translate")]
+        private Transform target = null;
         
-        [SerializeField] private bool logInput = false;
+        [SerializeField, Tooltip("The speed of translation on the x, y, and z axis")]
+        private Vector3 speed = Vector3.one;
+
+        [Header("Input Actions")]
+        [SerializeField, Tooltip("The input action to translate on the x axis")]
+        private InputActionReference xAction = null;
+        
+        [SerializeField, Tooltip("The input action to translate on the y axis")]
+        private InputActionReference yAction = null;
+        
+        [SerializeField, Tooltip("The input action to translate on the z axis")]
+        private InputActionReference zAction = null;
+        
+        [Header("Debug")]
+        [SerializeField, Tooltip("Log the input values")]
+        private bool logInput = false;
         
         private Vector3 movement = Vector3.zero;
 
@@ -54,17 +68,17 @@ namespace CDI.Toolkit.InputHandling
         
         private void Update()
         {
-            if (xAction != null)
+            if (xAction)
             {
                 movement.x = xAction.action.ReadValue<float>() * speed.x;
             }
             
-            if (yAction != null)
+            if (yAction)
             {
                 movement.y = yAction.action.ReadValue<float>() * speed.y;
             }
             
-            if (zAction != null)
+            if (zAction)
             {
                 movement.z = zAction.action.ReadValue<float>() * speed.z;
             }

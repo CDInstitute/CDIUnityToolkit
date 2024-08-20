@@ -11,10 +11,15 @@ using UnityEngine.InputSystem;
 // 4. If you have multiple cameras then make sure to drag your VR (center eye) camera into the canvas.
 public class GazeInputModule : PointerInputModule
 {
+    /// <summary>
+    /// The method used to determine when a click should be triggered.
+    /// </summary>
     public enum Mode { Click = 0, Gaze };
+    
+    [Tooltip("The method to use for click selection.")]
     public Mode mode;
 
-    [Header("Submit Settings")]
+    [Header("Submit Settings"), Tooltip("The button that should be pressed to submit a click.")]
     public InputActionReference submitAction = null;
     
     [Header("Gaze Settings")]
@@ -24,6 +29,9 @@ public class GazeInputModule : PointerInputModule
     private GameObject currentLookAtHandler;
     private float currentLookAtHandlerClickTime;
 
+    /// <summary>
+    /// Process the next frame of the input.
+    /// </summary>
     public override void Process()
     {
         HandleLook();
@@ -50,6 +58,9 @@ public class GazeInputModule : PointerInputModule
         }
     }
 
+    /// <summary>
+    /// Handle looking on every frame.
+    /// </summary>
     private void HandleLook()
     {
         pointerEventData ??= new PointerEventData(eventSystem);
@@ -63,6 +74,9 @@ public class GazeInputModule : PointerInputModule
         ProcessMove(pointerEventData);
     }
 
+    /// <summary>
+    /// Handle selection on every frame.
+    /// </summary>
     private void HandleSelection()
     {
         if (pointerEventData.pointerEnter != null)

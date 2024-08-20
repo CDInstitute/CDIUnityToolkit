@@ -4,21 +4,46 @@ using UnityEngine.InputSystem;
 
 namespace CDI.Toolkit.InputHandling
 {
+    /// <summary>
+    /// Rotate a target transform based on input on the x and y axis.
+    /// </summary>
     public class RotateOnAxisInput : MonoBehaviour
     {
-        [SerializeField] private Transform target = null;
+        [SerializeField, Tooltip("The target transform to rotate")]
+        private Transform target = null;
         
-        [SerializeField] private InputActionReference enableAction = null;
-        [SerializeField] private InputActionReference xAxis = null;
-        [SerializeField] private InputActionReference yAxis = null;
+        [Header("Input Actions")]
+        [SerializeField, Tooltip("The action to enable rotation")]
+        private InputActionReference enableAction = null;
         
-        [SerializeField] private float sensitivityX = 15.0f;
-        [SerializeField] private float sensitivityY = 15.0f;
-        [SerializeField] private float minimumX = -MathConstants.MaxAngleDegrees;
-        [SerializeField] private float maximumX = MathConstants.MaxAngleDegrees;
-        [SerializeField] private float minimumY = -60.0f;
-        [SerializeField] private float maximumY = 60.0f;
-        [SerializeField] private bool logInput = false;
+        [SerializeField, Tooltip("The action to rotate on the x axis")]
+        private InputActionReference xAxis = null;
+        
+        [SerializeField, Tooltip("The action to rotate on the y axis")]
+        private InputActionReference yAxis = null;
+        
+        [Header("Rotation Settings")]
+        [SerializeField, Tooltip("The sensitivity of rotation on the x axis")]
+        private float sensitivityX = 15.0f;
+        
+        [SerializeField, Tooltip("The sensitivity of rotation on the y axis")]
+        private float sensitivityY = 15.0f;
+        
+        [SerializeField, Tooltip("The minimum angle on the x axis")]
+        private float minimumX = -MathConstants.MaxAngleDegrees;
+        
+        [SerializeField, Tooltip("The maximum angle on the x axis")]
+        private float maximumX = MathConstants.MaxAngleDegrees;
+        
+        [SerializeField, Tooltip("The minimum angle on the y axis")]
+        private float minimumY = -60.0f;
+        
+        [SerializeField, Tooltip("The maximum angle on the y axis")]
+        private float maximumY = 60.0f;
+        
+        [Header("Debug")]
+        [SerializeField, Tooltip("Log the input values")]
+        private bool logInput = false;
 
         private Quaternion originalRotation;
         private Quaternion xQuaternion = Quaternion.identity;

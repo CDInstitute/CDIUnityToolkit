@@ -3,11 +3,19 @@ using UnityEngine.InputSystem;
 
 namespace CDI.Toolkit.TimeManagement
 {
+    /// <summary>
+    /// Scale time based on input.
+    /// </summary>
     public class ScaleTimeOnInput : MonoBehaviour
     {
-        [SerializeField] private InputActionReference scaleAction = null;
-        [SerializeField] private float normalTimeScale = 1.0f;
-        [SerializeField] private float timeScale = 10.0f;
+        [SerializeField, Tooltip("The input action to scale time")]
+        private InputActionReference scaleAction = null;
+        
+        [SerializeField, Tooltip("The normal time scale")]
+        private float normalTimeScale = 1.0f;
+        
+        [SerializeField, Tooltip("The time scale when input is pressed")]
+        private float timeScale = 10.0f;
 
         private void OnEnable()
         {
@@ -27,7 +35,7 @@ namespace CDI.Toolkit.TimeManagement
 
         private void Update()
         {
-            var isScaled = scaleAction != null && scaleAction.action.IsPressed();
+            var isScaled = scaleAction && scaleAction.action.IsPressed();
             Time.timeScale = isScaled
                 ? timeScale
                 : normalTimeScale;
