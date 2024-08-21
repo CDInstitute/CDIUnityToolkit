@@ -326,6 +326,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeftController
       objectReference: {fileID: 0}
+    - target: {fileID: 4383804002905089346, guid: f5a3aa3ad1fb47d429f03cbafff6a344,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -409,6 +414,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: RightController
+      objectReference: {fileID: 0}
+    - target: {fileID: 2296901790564476193, guid: c7fbed0a5435e9646988de536b34322b,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
