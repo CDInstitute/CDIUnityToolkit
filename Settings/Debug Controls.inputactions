@@ -1,0 +1,56 @@
+{
+    "name": "Debug Controls",
+    "maps": [
+        {
+            "name": "Debug Controls",
+            "id": "a8d513ef-7cbe-449e-96c5-b45449713ffb",
+            "actions": [
+                {
+                    "name": "Toggle FPS",
+                    "type": "Button",
+                    "id": "2d5fd3b6-c332-4817-b2dd-80093537e787",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "6b9504d0-63bd-47d5-8312-d4ee5756d42c",
+                    "path": "<Gamepad>/start",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle FPS",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "61a86f3d-a5f9-4037-896e-902b23cfc51f",
+                    "path": "<OculusTouchController>{RightHand}/thumbstickClicked",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle FPS",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "bb125a3e-b3ea-40d6-9a1b-329a4bacba22",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Toggle FPS",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
