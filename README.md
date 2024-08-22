@@ -1,75 +1,94 @@
 # 🚀 CDI Toolkit for Unity
-
 **Welcome to the CDI Toolkit for Unity!**  
-This toolkit is your go-to resource for streamlining the development of Computational Design Institute (CDI) - Dreamship Project for Pediatric Palliative Care, and its development in Unity [Dreamship](https://www.dreamship.live/). It includes a comprehensive collection of reusable tools, scripts, samples, settings, and resources to supercharge your Unity development.
+
+This toolkit is your go-to resource for streamlining the development of Computational Design Institute (CDI) -
+[Dreamship Projects](https://www.dreamship.live/) for Pediatric Palliative Care, in Unity.
+
+It includes a comprehensive and ongoing collection of reusable tools, scripts, samples, settings, and resources to
+supercharge your Unity development.
 
 ## ✨ Features
 
 ### 🔧 Reusable Tools
-- **Object Pooling:** Manage object creation and destruction efficiently.
-- **UI Framework:** Create consistent and user-friendly interfaces with ease.
-- **Animation System:** Add dynamic, context-aware animations to your projects.
-- **Input Handling:** Unified input management for multiple platforms, including VR and mobile.
+- **Camera Controls:** Implement intuitive camera movement and controls.
+- **Fade Material:** Create fade effects for sequencing.
+- **FPS Counter:** Display real-time frames per second on your UI.
+- **Editor Config:** Standardize project settings for a consistent development experience.
+- **Gaze Input Module:** Implement gaze-based input for VR projects.
+- **Indexed Collections:** Simplify the management of collections in your project.
+- **Time Scaler:** Control the timescale of your project for slow motion, fast-forwarding or pausing.
+- **Particle System Controller:** Control particle systems with ease.
+- **XR Rig:** Implement a ready-to-use XR rig for VR projects.
 
 ### 💻 Scripts
+- **Collection Management:** Simplify the management of collections in your project.
+- **Debugging**: Tools for debugging and testing your project.
 - **Event Management:** Decouple components and streamline communication in your projects.
-- **State Machines:** Easily integrate AI, character controllers, or gameplay logic.
-- **Data Management:** Save and load game states with powerful persistence tools.
-- **Scene Management:** Seamlessly transition between scenes with built-in support for loading screens.
+- **GameObject Management:** Simplify the management of GameObjects in your project.
+- **Input Handling:** Unified input management for multiple platforms, including VR and gamepads.
+- **Mathematics:** Common math constants and extensions for your project.
+- **Rendering:** Tools for managing rendering.
+- **Sequencing:** Tools for managing sequences and timelines.
+- **Time Management:** Tools for managing time and time-based events.
+- **VFX Management:** Tools for managing visual effects.
 
 ### 🎨 Samples and Resources
-- **Demo Scenes:** Explore example implementations and kickstart your project.
+- **Models:** Ready-to-use models and assets for prototyping and development.
 - **Prefabs:** Drag-and-drop components for quick integration.
-- **Textures, Materials, and Audio:** Enhance the look and feel of your project with our curated collection.
+- **Textures and Materials:** Enhance the look and feel of your project with our curated collection.
 
 ### ⚙️ Settings and Configuration
-- **Project Configuration:** Standardized settings optimized for CDI projects.
-- **Global Parameters:** Control game-wide settings from a single place.
+- **Input Actions:** Ready-to-use input actions for common interactions.
 
 ## 📦 Installation
+### Option 1: Clone to Assets Folder
+```bash
+git clone https://github.com/CDInstitute/CDIUnityToolkit.git
+```
+Don't forget to import the dependencies listed in the `package.json` file via the Unity Package Manager.
 
-1. **Clone the Repository:**
-   ```bash
-   git clone https://github.com/CDInstitute/CDIToolkit.git
-   ```
-2. **Import into Unity:**
-   Open your Unity project, go to `Assets > Import Package > Custom Package`, and select the `CDI Toolkit` package.
-
-3. **Setup:**
-   Run the provided setup script to configure global settings and integrate the toolkit into your project.
+### Option 2: Add as a Unity Package
+1. Open the Package Manager in Unity.
+2. Click on the `+` button and select `Add package from git URL`.
+3. Enter the following URL:
+`https://github.com/CDInstitute/CDIUnityToolkit.git`.
 
 ## 🚀 Getting Started
+1. **Explore the Samples**  
+Start by exploring the assets in our `Samples` folder. These will give you a solid foundation for integrating the
+features into your own project.
 
-1. **Explore the Demo Scenes:**  
-   Start by exploring our demo scenes located in the `Samples` folder. These will give you a solid foundation for integrating the toolkit into your own project.
 
-2. **Use Prefabs:**  
+2. **Use Prefabs**  
    Drag and drop prefabs from the `Prefabs` folder into your scene to quickly add functionality.
 
-3. **Leverage Scripts:**  
-   Utilize the scripts found in the `Scripts` folder to implement essential features like event management, state machines, and data handling.
 
-4. **Customize:**  
-   Tailor the toolkit to your needs by modifying settings and scripts, or adding your own custom resources.
+3. **Leverage Scripts**  
+Utilize the scripts to implement essential features like event management or save time with extension methods.
 
-## 💡 Potential Use Cases
 
-- **Game Development:** Create immersive and responsive games with context-aware interactions.
-- **VR/AR Projects:** Leverage the toolkit’s robust input handling for VR and AR experiences.
-- **Interactive Simulations:** Build engaging simulations with reusable components and streamlined workflows.
+4. **Customize**  
+Tailor the toolkit to your needs by modifying settings and scripts, or adding your own custom resources.
+You can always copy samples and modify them to suit your project.
+
+## 💡 Experience Use Cases
+**Restful Dreams**<br>
+Immersive calming experiences for pediatric palliative care patients.<br>
+
+**Playful Dreams**<br>
+Interactive experiences for children to engage with and distract from their pain.<br>
+
+**Lucid Dreams**<br>
+Empower children to be the hero of their stories through super human abilities.
 
 ## 🤝 Contributing
-
-We welcome contributions to the CDI Toolkit! If you’d like to contribute, please fork the repository and submit a pull request. Be sure to check out our [contributing guidelines](CONTRIBUTING.md) for more information.
+We welcome contributions to the toolkit! If you’d like to contribute, please fork the repository and submit a pull request.
 
 ## 🛠️ Support
-
-If you encounter any issues or have questions, feel free to open an issue in this repository. We’re here to help! info@cd.institute
+If you encounter any issues or have questions, feel free to open an issue in this repository.
 
 ## 📄 License
-
 This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
 
 ## 🌟 Acknowledgments
-
 CDI Team
