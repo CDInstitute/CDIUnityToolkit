@@ -9,9 +9,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - Camera Controls (Rotate on Input Axis, Translate on Input)
 - CDI Logo
-- CHANGELOG.md, LICENSE.md, README.md and package.json
+- CHANGELOG.md, LICENSE.md, README.md, Third Party Notices.md, and package.json
 - Controller Models, Materials, and Prefabs
 - Debug Controls
+- Editor Config
 - Fade Material Component
 - FPS Canvas and Counter
 - Indexed Collections (GameObject, PlayableDirector, UnityEvent)
