@@ -21,15 +21,18 @@ supercharge your Unity development.
 - **XR Rig:** Implement a ready-to-use XR rig for VR projects.
 
 ### 💻 Scripts
+- **Audio Management:** Tools for managing audio in your project.
 - **Collection Management:** Simplify the management of collections in your project.
 - **Debugging**: Tools for debugging and testing your project.
 - **Event Management:** Decouple components and streamline communication in your projects.
 - **GameObject Management:** Simplify the management of GameObjects in your project.
 - **Input Handling:** Unified input management for multiple platforms, including VR and gamepads.
 - **Mathematics:** Common math constants and extensions for your project.
+- **Randomness:** Tools for generating random values.
 - **Rendering:** Tools for managing rendering.
 - **Sequencing:** Tools for managing sequences and timelines.
 - **Time Management:** Tools for managing time and time-based events.
+- **Transform Management:** Tools for managing transforms.
 - **VFX Management:** Tools for managing visual effects.
 
 ### 🎨 Samples and Resources
